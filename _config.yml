@@ -1,3 +1,5 @@
-title: Lam is a programmer without object.
+title: I feel like an artist. 
 description: Here I record my learning process.
 theme: jekyll-theme-hacker
+# permalink: pretty
+permalink: /:categories/:title

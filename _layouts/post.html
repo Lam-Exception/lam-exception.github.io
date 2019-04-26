@@ -1,14 +1,26 @@
----
-layout: default
----
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: "en-US" }}">
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
 
-<small>{{ page.date | date: "%-d %B %Y" }}</small>
-<h1>{{ page.title }}</h1>
+{% seo %}
+  </head>
 
-<p class="view">by {{ page.author | default: site.author }}</p>
+  <body>
 
-{{content}}
+    <header>
+      <div class="container">
+        <h1>{{ page.title }}</h1>
+        <small>{{ page.date | date: "%-d %B %Y" }}</small>
+        <h2>{{ page.description }}</h2>
+      </div>
+    </header>
 
-{% if page.tags %}
-  <small>tags: <em>{{ page.tags | join: "</em> - <em>" }}</em></small>
-{% endif %}
+    <div class="container">
+        {{ content }}
+    </div>
+  </body>
+</html>
